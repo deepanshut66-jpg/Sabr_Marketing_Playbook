@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sabr-gulf
+    runtime: static
+    buildCommand: test -f index.html
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /climate
+        destination: /climate.html
+      - type: rewrite
+        source: /essentials
+        destination: /essentials.html
+      - type: rewrite
+        source: /our-story
+        destination: /our-story.html
+      - type: rewrite
+        source: /terms
+        destination: /terms.html
+      - type: rewrite
+        source: /privacy
+        destination: /privacy.html
